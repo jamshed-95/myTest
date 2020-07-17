@@ -23,7 +23,8 @@
                 <div class="col-lg-3 mr-auto">
                     <div class="border p-4 rounded">
                         <ul class="list-unstyled block__47528 mb-0">
-                            <li><span class="active">Graphic Design</span></li>
+                            <li><span class="active">Группы</span></li>
+
                             <li><a href="#">Marketing Strategy</a></li>
                             <li><a href="#">Web Design</a></li>
                             <li><a href="#">Market Leading</a></li>

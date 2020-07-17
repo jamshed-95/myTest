@@ -13,10 +13,11 @@
 
 
 Auth::routes();
+Route::group(['middleware' => ['guest']], function () {
+    Route::get('/', 'SiteController@index')->name('index');
+});
 
-Route::get('/', 'SiteController@index')->name('index');
-
-Route::group(['middleware' => ['auth']], function (){
+Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/home', 'SiteController@home')->name('home');
 
