@@ -20,6 +20,9 @@ Route::group(['middleware' => ['guest']], function () {
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/home', 'SiteController@home')->name('home');
+    Route::get('/get/{group}/contact', 'SiteController@getContact')->name('getContact');
+    Route::post('/add/group', 'SiteController@addGroup')->name('addGroup');
+    Route::post('/add/contact', 'SiteController@addContact')->name('addContact');
 
 });
 

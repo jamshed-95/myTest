@@ -24,4 +24,8 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('login', 'LoginController');
         Route::post('logout', 'LogoutController')->middleware('auth:api');
     });
+
+    Route::group(['namespace' => 'MyController'], function () {
+        Route::post('addContact', 'SiteController');
+    });
 });
