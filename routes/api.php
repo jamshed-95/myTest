@@ -26,6 +26,8 @@ Route::group(['namespace' => 'Api'], function () {
     });
 
     Route::group(['namespace' => 'MyController'], function () {
-        Route::post('addContact', 'SiteController');
+        Route::get('index', 'HomeController@index')->middleware(['auth:api']);
+        Route::post('addGroup', 'HomeController@addGroup')->middleware(['auth:api']);
+        Route::post('addNewContact', 'HomeController@addContact')->middleware(['auth:api']);
     });
 });
